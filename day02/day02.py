@@ -25,10 +25,10 @@ def part1(inpt):
 			score += 3 + right
 	return score
 
-def part2(inpt):
+def part2(input):
 	# 1 = lose, 2 = win, 3 = tie
 	score = 0
-	for i in inpt:
+	for i in input:
 		x = (i.replace("A",'1').replace("B",'2').replace("C",'3').replace("X",'1').replace("Y",'2').replace("Z",'3').split(" "))
 		left, right = int(x[0]), int(x[1])
 		if right == 1:
