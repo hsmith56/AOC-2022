@@ -9,9 +9,10 @@ def load():
 inpt = load()
 def part1(inpt):
 	board = []
-	mv_list = []
 	columns = {}
 	moves = 0
+
+	# look through the input and seperate the moves from the stacks
 	for x, y in enumerate(inpt):
 		if y.replace(" ", "").isdecimal():
 			moves = x + 2
@@ -51,7 +52,6 @@ def part1(inpt):
 
 def part2(inpt):
 	board = []
-	mv_list = []
 	columns = {}
 	moves = 0
 	for x, y in enumerate(inpt):
