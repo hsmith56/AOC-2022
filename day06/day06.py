@@ -7,10 +7,14 @@ def load():
 	return d
 
 inpt = load()
-def part1(inpt):
+def part1(inpt, size):
+	inpt = inpt[0]
+	for i in range(0,len(inpt)-size):
+		if len(set(inpt[i:i+size])) == size:
+			return i + size
 	return inpt
 
 def part2(inpt):
-	return 0
+	return inpt
 
-print(f'Part1: {part1(inpt)}\nPart2: {part2(inpt)}')
+print(f'Part1: {part1(inpt, 4)}\nPart2: {part1(inpt, 14)}')
